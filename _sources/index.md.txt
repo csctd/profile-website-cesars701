@@ -1,9 +1,9 @@
-# Page Title
+# My Awesome Slay Website 
 
-A short introduction for the top of your main page
+This is my awesome amazing website for TD, I have never done coding but this is super awesome and fun already.
 
 
-More content you want on your page
+I am a computer engineering major 
 
 
 
