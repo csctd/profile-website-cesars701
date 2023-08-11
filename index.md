@@ -7,7 +7,7 @@
 <h5>This is my awesome amazing website for TD, I have never done coding but this is super awesome and fun already.<h5>
 
 
-I am a computer engineering major 
+I am a computer engineering major!
 
 <h1> Games Of the Month <h1>
 
