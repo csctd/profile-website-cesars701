@@ -1,5 +1,10 @@
 # My TD Summer!
 
+<div id= "slideshow">
+
+```{include} _static/play_pause.html
+```
+
 :::{card}
 :class-card: slide
 
@@ -127,5 +132,5 @@
 ![beach pic](_static/img/IMG-2933.jpeg)
 :::
 
-```{include} _static/play_pause.html
-```
+
+</div>
