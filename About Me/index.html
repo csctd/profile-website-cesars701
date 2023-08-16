@@ -60,7 +60,7 @@
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="next" title="Games I Am Playing" href="../Games-I-Am-Playing/" />
-    <link rel="prev" title="TD 2023 summer so far" href="../pechakucha/" />
+    <link rel="prev" title="My TD Summer!" href="../pechakucha/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -148,7 +148,7 @@
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../pechakucha/">
-                        TD 2023 summer so far
+                        My TD Summer!
                       </a>
                     </li>
                 
@@ -273,7 +273,7 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../pechakucha/">
-                        TD 2023 summer so far
+                        My TD Summer!
                       </a>
                     </li>
                 
@@ -418,7 +418,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">TD 2023 summer so far</p>
+        <p class="prev-next-title">My TD Summer!</p>
       </div>
     </a>
     <a class="right-next"
@@ -466,25 +466,32 @@ document.write(`
   <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
+<!--  the stuff above here makes your pages work regularly -->
+<!--  the stuff below here puts javascript on all of the pages -->
 
 <script>
+    // this section is javascript, not HTML evn though it's in the HTML file
     let slideIndex = 0;
     let slides = document.getElementsByClassName("slide");
-    if (slides.length > 0 ){
-        showSlides();
-    }
+    let slideTime = 5000;
+    // var slideInterval = setInterval(showSlides, slideTime);
+    // clearInterval(slideInterval);
+
+    // if (slides.length > 0 ){
+    //     showSlides();
+    // }
 
     function showSlides() {
         let i;
         let slides = document.getElementsByClassName("slide");
-        console.log('in')
-        console.log(slides.length)
-        console.log(slideIndex)
+        // console.log('in')
+        // console.log(slides.length)
+        // console.log(slideIndex)
 
         let dots = document.getElementsByClassName("dot");
         for (i = 0; i < slides.length; i++) {
-            console.log(i)
-            console.log('off')
+            // console.log(i)
+            // console.log('off')
             slides[i].style.display = "none";
         }
         slideIndex++;
@@ -496,8 +503,40 @@ document.write(`
         // slides[slideIndex - 1].style.display = "block";
         // slides[slideIndex-1].setAttribute("style","display:block");
         // dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 5000); // Change image every 2 seconds
+        // setTimeout(showSlides, slideTime); // Change image every 2 seconds
     }
+
+//  make full screen mode
+    function openFullscreen() {
+        var elem = document.getElementById('slideshow');
+        console.log('fullscreen');
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+        showSlides()
+        slideInterval = setInterval(showSlides, slideTime);
+    }
+
+
+    function closeFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+            }
+
+        clearInterval(slideInterval);
+        }
 </script>
 
   </body>
